@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+	# Make sure directory listing is disabled
+	Options +FollowSymLinks -Indexes
+    <IfModule mod_rewrite.c>
+        RewriteEngine on
+        # Redirect requests to site
+        RewriteRule  ^$ ci44/    [L]
+        RewriteRule  (.*) ci44/$1 [L]
+    </IfModule>
+</IfModule>
